@@ -9,7 +9,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   apiurlBase='http://localhost:3000';
-  apiurluser='http://localhost:3000/userList';
+  apiurluser='https://residencia.onrender.com/userList';
   apiurlapto='http://localhost:3000/apartamentoList';
   apiurlbecado='http://localhost:3000/becado';
   apiurlcantidades='http://localhost:3000/cantidades/';
@@ -117,7 +117,7 @@ export class ApiService {
   getTotalRegistros(entidad:string):Observable<number>{
     const url='${this.apiurlBase}/${entidad}?_total';
     return this.http.get<{_total:number}>(url).pipe(map(res=>res._total));
-    
+
   }
 
 }
