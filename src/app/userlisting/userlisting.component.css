@@ -1,0 +1,17 @@
+.title-table
+{
+  font-weight: 900;
+}
+
+
+.title-table:hover{
+  background: #7c4dff;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 900;
+}
+
+.contenedorGrande{
+    height: 100%;
+}

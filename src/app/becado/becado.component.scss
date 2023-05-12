@@ -1,0 +1,48 @@
+example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.toolbar{
+  min-width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+
+.title-table:hover{
+  background: #7c4dff;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 900;
+}
+
+.container
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.colum
+{
+  align-items: center;
+}
+
+.filter{
+  position: absolute;
+  display: flex;
+
+}
+
+

@@ -1,0 +1,12 @@
+<div class="container1 mat-app-background">
+
+<app-sidenav *ngIf="ismenurequired"  (onToggleSideNav)="onToggleSideNav($event)">
+
+</app-sidenav>
+
+<app-body
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+></app-body>
+
+</div>

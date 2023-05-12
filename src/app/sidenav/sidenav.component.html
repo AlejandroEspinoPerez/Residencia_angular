@@ -1,0 +1,38 @@
+<div class="sidenav" style="color:{{color}}" [ngClass]="collapsed ?'sidenav-collapsed':'' ">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()">A</button>
+    <div class="logo-text" @fadeInOut *ngIf="collapsed">Angular</div>
+    <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
+      <i class="fal fa-times close-icon" @rotate></i>
+    </button>
+  </div>
+  <ul class="sidenav-nav">
+
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+
+        <i class="sidenav-link-icon icon-sidenav" [class]="data.icon"></i>
+        <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">{{data.label}}</span>
+      </a>
+    </li>
+
+
+    <li class="sidenav-nav-item logout">
+      <a class="sidenav-nav-link" routerLink="/login">
+        <mat-icon class="sidenav-link-text icon-sidenav">logout</mat-icon>
+        <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">Logout</span>
+      </a>
+    </li>
+
+
+    <li class="sidenav-nav-item switch">
+      <mat-slide-toggle  thumbIcon (ngModelChange)="onChange($event)" ngModel="isdarkThemeActive"></mat-slide-toggle>
+
+      <span class="sidenav-link-text" style="color:#fff" @fadeInOut *ngIf="collapsed">{{name}}</span>
+
+    </li>
+  </ul>
+
+
+</div>
