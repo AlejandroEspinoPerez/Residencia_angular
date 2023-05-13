@@ -291,32 +291,31 @@
       "ano": "2",
       "evaluacion": "MB",
       "id": 1
+    },
+    {
+      "nombreBecado": "nuuyybjjjjj",
+      "numeroCI": 787,
+      "ano": "4",
+      "evaluacion": "MB",
+      "id": 2
     }
   ],
   "apartamentoList": [
-    {
-      "numeroApartamento": "102",
-      "cantBecados": 6,
-      "nombreJefe": "sssssss",
-      "capacidadApto": 34,
-      "id": 1
-    },
     {
       "numeroApartamento": "101",
       "cantBecados": 54,
       "nombreJefe": "alejandro",
       "capacidadApto": 38,
       "id": 3
+    },
+    {
+      "numeroApartamento": "101",
+      "nombreJefe": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
+      "capacidadApto": -3,
+      "id": 4
     }
   ],
   "residenciaList": [
-    {
-      "numeroFacultad": "3",
-      "numeroEdificio": 2,
-      "cantApto": 37,
-      "nombreJefe": "uiiiyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
-      "id": 19
-    },
     {
       "numeroFacultad": "2",
       "numeroEdificio": 2,
@@ -330,13 +329,6 @@
       "cantApto": 23,
       "nombreJefe": "uuuu",
       "id": 21
-    },
-    {
-      "numeroFacultad": "1",
-      "numeroEdificio": 2,
-      "cantApto": 6,
-      "nombreJefe": "wwwwwwwwwwwwwwwwwwwwwwwwww",
-      "id": 22
     },
     {
       "numeroFacultad": "1",

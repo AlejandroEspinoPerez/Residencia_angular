@@ -26,14 +26,12 @@ export class DialogAptoComponent {
   ngOnInit(): void {
     this.aptoForm=this.formBuilder.group({
       numeroApartamento:['',Validators.required],
-      cantBecados:['',Validators.required],
       nombreJefe:['',Validators.required],
       capacidadApto:['',Validators.required]
     });
     if (this.editData) {
       this.actionButton="UPDATE";
       this.aptoForm.controls['numeroApartamento'].setValue(this.editData.numeroApartamento);
-      this.aptoForm.controls['cantBecados'].setValue(this.editData.cantBecados);
       this.aptoForm.controls['nombreJefe'].setValue(this.editData.nombreJefe);
       this.aptoForm.controls['capacidadApto'].setValue(this.editData.capacidadApto);
     }

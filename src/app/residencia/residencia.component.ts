@@ -68,10 +68,10 @@ export class ResidenciaComponent{
   }
 
   openDialogApartamento(): void {
-
+console.log('fuere del if');
 
     if (this.haveadd) {
-
+      console.log('dentro del if')
     this.dialog.open(DialogAptoComponent, {
       width: '30%'
     }).afterClosed().subscribe(val => {
