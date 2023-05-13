@@ -8,27 +8,28 @@ import { Observable, map } from 'rxjs';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  apiurlBase='http://localhost:3000';
-  apiurluser='https://residencia.onrender.com/userList';
-  apiurlapto='http://localhost:3000/apartamentoList';
-  apiurlbecado='http://localhost:3000/becado';
-  apiurlcantidades='http://localhost:3000/cantidades/';
+  apiurlBase='https://residencia.onrender.com/';
+  apiurluser='https://residencia.onrender.com/userList/';
+  apiurlresidencia='https://residencia.onrender.com/residenciaList/';
+  apiurlapto='https://residencia.onrender.com/apartamentoList/';
+  apiurlbecado='https://residencia.onrender.com/becadoList/';
+  apiurlcantidades='https://residencia.onrender.com/cantidades/';
 
   //Accesos a la residencia ==============================
   getAllResidencia(){
-    return this.http.get("http://localhost:3000/residenciaList");
+    return this.http.get(this.apiurlresidencia);
   }
   postResidencia(data:any){
-    return this.http.post<any>("http://localhost:3000/residenciaList",data);
+    return this.http.post<any>(this.apiurlresidencia,data);
   }
   getResidencia(){
-    return this.http.get<any>("http://localhost:3000/residenciaList");
+    return this.http.get<any>(this.apiurlresidencia);
   }
   putResidencia(data:any,id : number){
-    return this.http.put<any>("http://localhost:3000/residenciaList/"+id ,data);
+    return this.http.put<any>(this.apiurlresidencia+id ,data);
   }
   deleteResidencia(id:number){
-      return this.http.delete<any>("http://localhost:3000/residenciaList/"+id);
+      return this.http.delete<any>(this.apiurlresidencia+id);
   }
 
 
@@ -43,16 +44,16 @@ export class ApiService {
     return this.http.get(this.apiurluser);
   }
   getAllRole(){
-    return this.http.get('http://localhost:3000/role');
+    return this.http.get(this.apiurluser+'role');
   }
   getbycode(code:any){
-    return this.http.get(this.apiurluser+'/'+code);
+    return this.http.get(this.apiurluser+code);
   }
   prosederRegister(data:any){
     return this.http.post(this.apiurluser,data);
   }
   updateUser(data:any,code:any){
-    return this.http.put<any>(this.apiurluser+'/'+code ,data);
+    return this.http.put<any>(this.apiurluser + code ,data);
   }
   IsloggedIn(){
     return sessionStorage.getItem('username')!=null;
@@ -62,7 +63,7 @@ export class ApiService {
   }
    //obtener los accesos por roles ===========================
   getAccessbyRole(role:any,menu:any){
-    return this.http.get('http://localhost:3000/roleacces?role='+role+'&menu='+menu);
+    return this.http.get('https://residencia.onrender.com/roleacces?role='+role+'&menu='+menu);
   }
 
 
@@ -80,10 +81,10 @@ export class ApiService {
     return this.http.get<any>(this.apiurlapto);
   }
   putApto(data:any,id : number){
-    return this.http.put<any>(this.apiurlapto+"/"+id ,data);
+    return this.http.put<any>(this.apiurlapto+id ,data);
   }
   deleteApto(id:number){
-      return this.http.delete<any>(this.apiurlapto+"/"+id);
+      return this.http.delete<any>(this.apiurlapto+id);
   }
 
 
@@ -92,26 +93,26 @@ export class ApiService {
 
   //Accesos a becados ==============================
   getAllBecado(){
-    return this.http.get("http://localhost:3000/becadoList");
+    return this.http.get(this.apiurlbecado);
   }
   postBecado(data:any){
-    return this.http.post<any>("http://localhost:3000/becadoList",data);
+    return this.http.post<any>(this.apiurlbecado,data);
   }
   getBecado(){
-    return this.http.get<any>("http://localhost:3000/becadoList");
+    return this.http.get<any>(this.apiurlbecado);
   }
   putBecado(data:any,id : number){
-    return this.http.put<any>("http://localhost:3000/becadoList/"+id ,data);
+    return this.http.put<any>(this.apiurlbecado+id ,data);
   }
   deleteBecado(id:number){
-      return this.http.delete<any>("http://localhost:3000/becadoList/"+id);
+      return this.http.delete<any>(this.apiurlbecado+id);
   }
 
 
 
 
   getAll(){
-    return this.http.get("http://localhost:3000");
+    return this.http.get(this.apiurlBase);
   }
 
   getTotalRegistros(entidad:string):Observable<number>{
