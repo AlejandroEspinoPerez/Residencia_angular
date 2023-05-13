@@ -8,62 +8,12 @@ import { Observable, map } from 'rxjs';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  apiurlBase='http://localhost:3000';
-  apiurluser='https://residencia.onrender.com/userList';
-  apiurlapto='http://localhost:3000/apartamentoList';
-  apiurlbecado='http://localhost:3000/becado';
-  apiurlcantidades='http://localhost:3000/cantidades/';
-
-  //Accesos a la residencia ==============================
-  getAllResidencia(){
-    return this.http.get("http://localhost:3000/residenciaList");
-  }
-  postResidencia(data:any){
-    return this.http.post<any>("http://localhost:3000/residenciaList",data);
-  }
-  getResidencia(){
-    return this.http.get<any>("http://localhost:3000/residenciaList");
-  }
-  putResidencia(data:any,id : number){
-    return this.http.put<any>("http://localhost:3000/residenciaList/"+id ,data);
-  }
-  deleteResidencia(id:number){
-      return this.http.delete<any>("http://localhost:3000/residenciaList/"+id);
-  }
-
-
-
-
-  //Accesos a la user list ==============================
-  postCantUser(data:any){
-    return this.http.post(this.apiurlcantidades,data);
-  }
-
-  getAllUser(){
-    return this.http.get(this.apiurluser);
-  }
-  getAllRole(){
-    return this.http.get(this.apiurluser+'role');
-  }
-  getbycode(code:any){
-    return this.http.get(this.apiurluser+code);
-  }
-  prosederRegister(data:any){
-    return this.http.post(this.apiurluser,data);
-  }
-  updateUser(data:any,code:any){
-    return this.http.put<any>(this.apiurluser+'/'+code ,data);
-  }
-  IsloggedIn(){
-    return sessionStorage.getItem('username')!=null;
-  }
-  getUserrole(){
-    return sessionStorage.getItem('userrole')!=null?sessionStorage.getItem('userrole')?.toString():'';
-  }
-  //obtener los accesos por roles ===========================
-  getAccessbyRole(role:any,menu:any){
-    return this.http.get('https://residencia.onrender.com/roleacces?role='+role+'&menu='+menu);
-  }
+  apiurlBase='https://residencia.onrender.com/';
+  apiurluser='https://residencia.onrender.com/userList/';
+  apiurlresidencia='https://residencia.onrender.com/residenciaList/';
+  apiurlapto='https://residencia.onrender.com/apartamentoList/';
+  apiurlbecado='https://residencia.onrender.com/becadoList/';
+  apiurlcantidades='https://residencia.onrender.com/cantidades/';
 
   //Accesos a la residencia ==============================
   getAllResidencia(){
@@ -81,6 +31,41 @@ export class ApiService {
   deleteResidencia(id:number){
       return this.http.delete<any>(this.apiurlresidencia+id);
   }
+
+
+
+
+   //Accesos a la user list ==============================
+  postCantUser(data:any){
+    return this.http.post("http://localhost:3000/cantidades",data);
+  }
+
+  getAllUser(){
+    return this.http.get(this.apiurluser);
+  }
+  getAllRole(){
+    return this.http.get(this.apiurluser+'role');
+  }
+  getbycode(code:any){
+    return this.http.get(this.apiurluser+code);
+  }
+  prosederRegister(data:any){
+    return this.http.post(this.apiurluser,data);
+  }
+  updateUser(data:any,code:any){
+    return this.http.put<any>(this.apiurluser + code ,data);
+  }
+  IsloggedIn(){
+    return sessionStorage.getItem('username')!=null;
+  }
+    getUserrole(){
+    return sessionStorage.getItem('userrole')!=null?sessionStorage.getItem('userrole')?.toString():'';
+  }
+   //obtener los accesos por roles ===========================
+  getAccessbyRole(role:any,menu:any){
+    return this.http.get('https://residencia.onrender.com/roleacces?role='+role+'&menu='+menu);
+  }
+
 
 
 
