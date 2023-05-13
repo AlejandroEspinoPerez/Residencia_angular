@@ -9,13 +9,27 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   apiurlBase='http://localhost:3000';
-  apiurluser='https://residencia.onrender.com/userList/';
-  //apiurluser='http://localhost:3000/userList/';
-  apiurlresidencia='http://localhost:3000/residenciaList/';
-  apiurlapto='http://localhost:3000/apartamentoList/';
-  apiurlbecado='http://localhost:3000/becadoList/';
+  apiurluser='https://residencia.onrender.com/userList';
+  apiurlapto='http://localhost:3000/apartamentoList';
+  apiurlbecado='http://localhost:3000/becado';
   apiurlcantidades='http://localhost:3000/cantidades/';
 
+  //Accesos a la residencia ==============================
+  getAllResidencia(){
+    return this.http.get("http://localhost:3000/residenciaList");
+  }
+  postResidencia(data:any){
+    return this.http.post<any>("http://localhost:3000/residenciaList",data);
+  }
+  getResidencia(){
+    return this.http.get<any>("http://localhost:3000/residenciaList");
+  }
+  putResidencia(data:any,id : number){
+    return this.http.put<any>("http://localhost:3000/residenciaList/"+id ,data);
+  }
+  deleteResidencia(id:number){
+      return this.http.delete<any>("http://localhost:3000/residenciaList/"+id);
+  }
 
 
 
@@ -38,7 +52,7 @@ export class ApiService {
     return this.http.post(this.apiurluser,data);
   }
   updateUser(data:any,code:any){
-    return this.http.put<any>(this.apiurluser+code ,data);
+    return this.http.put<any>(this.apiurluser+'/'+code ,data);
   }
   IsloggedIn(){
     return sessionStorage.getItem('username')!=null;
@@ -48,7 +62,7 @@ export class ApiService {
   }
   //obtener los accesos por roles ===========================
   getAccessbyRole(role:any,menu:any){
-    return this.http.get('http://localhost:3000/roleacces?role='+role+'&menu='+menu);
+    return this.http.get('https://residencia.onrender.com/roleacces?role='+role+'&menu='+menu);
   }
 
   //Accesos a la residencia ==============================
@@ -113,7 +127,7 @@ export class ApiService {
 
 
   getAll(){
-    return this.http.get("http://localhost:3000");
+    return this.http.get(this.apiurlBase);
   }
 
   getTotalRegistros(entidad:string):Observable<number>{

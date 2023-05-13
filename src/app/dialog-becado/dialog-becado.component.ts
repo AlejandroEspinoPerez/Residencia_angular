@@ -54,7 +54,7 @@ export class DialogBecadoComponent {
           this.dialogRef.close('save');
         },
         error:()=>{
-          this.toast.error('Error al agregar el apto');
+          this.toast.error('Error al agregar el becado');
         }
       })
     }
