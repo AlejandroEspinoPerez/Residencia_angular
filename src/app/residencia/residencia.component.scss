@@ -10,7 +10,8 @@ example-icon {
 }
 
 table {
-  width: 100%;
+  width: 90%;
+  padding: 20px;
 }
 
 .mat-mdc-form-field {
@@ -28,11 +29,6 @@ table {
 }
 
 
-.colum
-{
-  align-items: center;
-}
-
 .filter{
   position: absolute;
   display: flex;
@@ -41,10 +37,13 @@ table {
 
 .title-table{
   font-weight: 900;
-}
 
-.title-table:hover{
+}
+th{
   background: #7c4dff;
+}
+.title-table:hover{
+  background: #592ada;
   border-radius: 20px;
   overflow: hidden;
   color: #fff;
@@ -55,15 +54,27 @@ table {
   flex: 1 0 20%;
 
 }
-.mar-column-nombre{
-  flex: 1 0 20%;
 
+
+
+$bordercolor:rgba(0,0,0,0.12);
+$alternarColor:rgba(0,179,166,0.84);
+.mat-mdc-table .mdc-data-table__header-row  {
+  height: 30px;
+  background: #7c4dff;
 }
-.mar-column-nombre{
-  flex: 1 0 20%;
-
+.mat-mdc-table:nth-child(even){
+  max-height: 20px;
+  background-color: $alternarColor;
 }
-
-.toolbar{
-  gap: 5px;
+.mat-table{
+  font-family: 'Times New Roman', Times, serif;
+}
+.mat-cell{
+  font-size: 10px;
+  height: 20px;
+}
+.mat-cell:nth-child(even){
+  max-height: 20px;
+  background-color: $alternarColor;
 }
