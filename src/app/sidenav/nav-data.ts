@@ -23,5 +23,10 @@ export const navbarData = [
         routeLink: 'userlisting',
         icon: 'fal fa-cog',
         label: 'Users and Permission'
-    }
+    },
+    {
+      routeLink: 'login',
+      icon: 'fas fa-sign-out',
+      label: 'Logout'
+  }
 ];

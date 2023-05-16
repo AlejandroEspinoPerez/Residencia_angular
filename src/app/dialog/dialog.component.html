@@ -1,9 +1,11 @@
-<h1 mat-dialog-title>Adicionar Residencia</h1>
+<div class="container1">
 
-<div mat-dialog-content>
+  <h1 mat-dialog-title>Adicionar Residencia</h1>
 
-  <form [formGroup]="residenciaForm">
-    <mat-form-field class="input" appearance="outline">
+  <div mat-dialog-content>
+
+    <form [formGroup]="residenciaForm">
+      <mat-form-field class="input" appearance="outline">
       <mat-label># Facultad</mat-label>
       <mat-select formControlName="numeroFacultad"  placeholder="Facultad..." >
           <mat-option value="1">Facultad 1</mat-option>
@@ -27,11 +29,11 @@
       <input matInput type="number" formControlName="numeroEdificio" placeholder="Escribe el edificio..">
 </mat-form-field>
 
-    <mat-form-field class="input"  appearance="outline">
-          <mat-label>Jefe</mat-label>
-          <input matInput type="text" formControlName="nombreJefe"  placeholder="Escribe el nombre..">
-    </mat-form-field>
-  </form>
+<mat-form-field class="input"  appearance="outline">
+  <mat-label>Jefe</mat-label>
+  <input matInput type="text" formControlName="nombreJefe"  placeholder="Escribe el nombre..">
+</mat-form-field>
+</form>
 
 </div>
 
@@ -43,3 +45,6 @@
 </div>
 
 
+
+
+</div>

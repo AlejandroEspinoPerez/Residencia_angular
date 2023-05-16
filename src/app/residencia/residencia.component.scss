@@ -20,7 +20,10 @@ table {
 }
 
 
+.container-table{
+  margin-top: 10px;
 
+  }
 .container
 { width: 100%;
   margin: 0 auto;
@@ -42,12 +45,8 @@ table {
 th{
   background: #7c4dff;
 }
-.title-table:hover{
-  background: #592ada;
-  border-radius: 20px;
-  overflow: hidden;
-  color: #fff;
-  font-weight: 900;
+.colum{
+  max-width: 20%;
 }
 
 .mar-column-nombre{
@@ -78,3 +77,121 @@ $alternarColor:rgba(0,179,166,0.84);
   max-height: 20px;
   background-color: $alternarColor;
 }
+
+
+
+
+@media (max-width: 600px){
+  example-icon {
+    padding: 0 14px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .toolbar{
+    min-width: 100%;
+  }
+
+  table {
+    width: 90%;
+    padding: 5px;
+  }
+
+  .mat-mdc-form-field {
+    font-size: 4px;
+    width: 100%;
+  }
+
+
+
+  .container
+  { width: 100%;
+    margin: 0 auto;
+    height: 100%;
+
+  }
+
+
+  .filter{
+    position: absolute;
+    display: flex;
+
+  }
+
+  .title-table{
+    font-weight: 500;
+    max-width: 10px;
+    height: 50px;
+  }
+  th{
+    background: #7c4dff;
+    max-width: 30px;
+  }
+
+
+  .mar-column-nombre{
+    flex: 1 1 1%;
+
+  }
+.columaccion{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+}
+.colum{
+  padding: 0px;
+  margin: 0;
+  max-width: 20%;
+}
+.title-accion{
+max-width: 5px;
+}
+
+.container-table{
+  margin: 0;
+
+  }
+
+
+.mat-mdc-cell .mdc-data-table__cell .cdk-cell .columaccion .cdk-column-Acciones {
+padding: 0px;
+align-items: center;
+background-color: aquamarine;
+}
+
+.mdc-data-table__cell, .mdc-data-table__header-cell{
+  padding: 0px;
+}
+.mdc-data-table__cell, .mdc-data-table__header-cell{
+  padding: 10px;
+}
+
+  .mat-mdc-table:nth-child(even){
+    max-height: 20px;
+    background-color: $alternarColor;
+  }
+  .mat-table{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .mat-cell{
+    font-size: 5px;
+    height: 20px;
+  }
+  .mat-cell:nth-child(even){
+    max-height: 20px;
+    background-color: $alternarColor;
+  }
+  .mat-cell, .mat-header-cell {
+    font-size: 4px;
+  }
+  .texto{
+    font-weight: 100;
+  }
+}
+
+
+
+

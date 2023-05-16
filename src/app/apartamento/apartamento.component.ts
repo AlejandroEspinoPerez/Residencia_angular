@@ -43,7 +43,7 @@ export class ApartamentoComponent {
     if (this.haveadd) {
 
     this.dialog.open(DialogAptoComponent, {
-      width: '30%'
+      width: '50%'
     }).afterClosed().subscribe(val => {
       if (val === 'save') {
 
@@ -78,7 +78,7 @@ export class ApartamentoComponent {
     if (this.haveadd) {
 
     this.dialog.open(DialogBecadoComponent, {
-      width: '30%'
+      width: '50%'
     }).afterClosed().subscribe(val => {
       if (val === 'save') {
 
@@ -138,7 +138,7 @@ export class ApartamentoComponent {
   editApto(row: any) {
     if(this.haveedit){
 
-    this.dialog.open(DialogAptoComponent, { width: '30%', data: row }).afterClosed().subscribe(val => {
+    this.dialog.open(DialogAptoComponent, { width: '50%', data: row }).afterClosed().subscribe(val => {
       if (val === 'update') {
         this.getAllAptos();
       }

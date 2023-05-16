@@ -39,7 +39,7 @@ export class ResidenciaComponent{
 
 
     this.dialog.open(DialogComponent, {
-      width: '30%'
+      width: '50%'
     }).afterClosed().subscribe(val => {
       if (val === 'save') {
 
@@ -73,7 +73,7 @@ export class ResidenciaComponent{
     if (this.haveadd) {
 
     this.dialog.open(DialogAptoComponent, {
-      width: '30%'
+      width: '50%'
     }).afterClosed().subscribe(val => {
       if (val === 'save') {
 
@@ -134,7 +134,7 @@ export class ResidenciaComponent{
   editResidencia(row: any) {
     if(this.haveedit){
 
-    this.dialog.open(DialogComponent, { width: '30%', data: row }).afterClosed().subscribe(val => {
+    this.dialog.open(DialogComponent, { width: '50%', data: row }).afterClosed().subscribe(val => {
       if (val === 'update') {
         this.getAllResidencias();
       }
