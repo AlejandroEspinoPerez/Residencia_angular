@@ -39,7 +39,7 @@ export class ResidenciaComponent{
 
 
     this.dialog.open(DialogComponent, {
-      width: '30%'
+      width: '50%'
     }).afterClosed().subscribe(val => {
       if (val === 'save') {
 
@@ -73,7 +73,7 @@ console.log('fuere del if');
     if (this.haveadd) {
       console.log('dentro del if')
     this.dialog.open(DialogAptoComponent, {
-      width: '30%'
+      width: '50%'
     }).afterClosed().subscribe(val => {
       if (val === 'save') {
 
@@ -134,7 +134,7 @@ console.log('fuere del if');
   editResidencia(row: any) {
     if(this.haveedit){
 
-    this.dialog.open(DialogComponent, { width: '30%', data: row }).afterClosed().subscribe(val => {
+    this.dialog.open(DialogComponent, { width: '50%', data: row }).afterClosed().subscribe(val => {
       if (val === 'update') {
         this.getAllResidencias();
       }

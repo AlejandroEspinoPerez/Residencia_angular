@@ -24,37 +24,37 @@
     <!-- # del Apartamento  Column -->
     <ng-container matColumnDef="numeroApto">
       <th  class="title-table" mat-header-cell *matHeaderCellDef mat-sort-header >Apartamento </th>
-      <td mat-cell *matCellDef="let row"> {{row.numeroApartamento}} </td>
+      <td mat-cell class="colum"  *matCellDef="let row"> {{row.numeroApartamento}} </td>
     </ng-container>
 
     <!-- Cantidad de Becados Column -->
     <ng-container matColumnDef="cantBecados" class="colum">
       <th class="title-table"  mat-header-cell *matHeaderCellDef mat-sort-header> Cantidad de Becados </th>
-      <td mat-cell *matCellDef="let row"> {{row.cantBecados}} </td>
+      <td mat-cell class="colum"  *matCellDef="let row"> {{row.cantBecados}} </td>
     </ng-container>
 
     <!-- Nombre del Jefe Column -->
     <ng-container matColumnDef="nombreJefe">
       <th  class="title-table" mat-header-cell *matHeaderCellDef mat-sort-header> Nombre del Jefe </th>
-      <td mat-cell *matCellDef="let row"> {{row.nombreJefe}} </td>
+      <td mat-cell class="colum"  *matCellDef="let row"> {{row.nombreJefe}} </td>
     </ng-container>
 
       <!-- Capacidad-->
     <ng-container matColumnDef="capacidadApto" >
       <th  class="title-table" mat-header-cell *matHeaderCellDef mat-sort-header> Capacidad </th>
-      <td mat-cell *matCellDef="let row"> {{row.capacidadApto}}</td>
+      <td mat-cell class="colum"  *matCellDef="let row"> {{row.capacidadApto}}</td>
     </ng-container>
 
     <!-- Disponibilidad-->
     <ng-container matColumnDef="disponibilidadApto" >
       <th  class="title-table" mat-header-cell *matHeaderCellDef mat-sort-header> Disponibilidad </th>
-      <td class="filas" mat-cell *matCellDef="let row"> {{row.capacidadApto}}</td>
+      <td class="filas colum" mat-cell *matCellDef="let row"> {{row.capacidadApto}}</td>
     </ng-container>
 
     <!-- Evaluacion Column -->
     <ng-container matColumnDef="evaluacionApto" class="colum">
       <th class="title-table"  mat-header-cell *matHeaderCellDef mat-sort-header>Evaluaion</th>
-      <td mat-cell *matCellDef="let row"> {{row.cantBecados}} </td>
+      <td mat-cell class="colum" *matCellDef="let row"> {{row.cantBecados}} </td>
     </ng-container>
 
 
@@ -65,7 +65,7 @@
       <ng-container matColumnDef="Acciones">
       <th  class="title-table" mat-header-cell *matHeaderCellDef mat-sort-header> Acciones</th>
 
-      <td mat-cell *matCellDef="let row">
+      <td mat-cell class="columaccion" *matCellDef="let row">
         <button (click)="editApto(row)" mat-icon-button color="primary">
           <mat-icon>edit</mat-icon>
         </button>

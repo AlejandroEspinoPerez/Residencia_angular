@@ -16,16 +16,6 @@
         <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">{{data.label}}</span>
       </a>
     </li>
-
-
-    <li class="sidenav-nav-item logout">
-      <a class="sidenav-nav-link" routerLink="/login">
-        <mat-icon class="sidenav-link-text icon-sidenav">logout</mat-icon>
-        <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">Logout</span>
-      </a>
-    </li>
-
-
     <li class="sidenav-nav-item switch">
       <mat-slide-toggle  thumbIcon (ngModelChange)="onChange($event)" ngModel="isdarkThemeActive"></mat-slide-toggle>
 
